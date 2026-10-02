@@ -1,0 +1,13 @@
+.headerText {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.headerText h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}

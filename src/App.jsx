@@ -5,7 +5,11 @@ import NoteCard from "./Components/NoteCard";
 import NoteForm from "./Components/NoteForm";
 
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default App;
