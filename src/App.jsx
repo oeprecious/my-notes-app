@@ -8,6 +8,11 @@ const App = () => {
   return (
     <>
       <Header />
+
+      <main>
+        <NoteForm />
+        <NoteCard />
+      </main>
     </>
   );
 };
