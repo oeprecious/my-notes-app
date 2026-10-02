@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NoteForm.css";
 
-const NoteForm = () => {
+const NoteForm = ({addNote}) => {
   // Title state
   const [title, setTitle] = useState("");
 
@@ -10,6 +10,8 @@ const NoteForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    addNote(title, description)
   };
 
   return (
@@ -43,7 +45,7 @@ const NoteForm = () => {
           ></textarea>
           <button id="btn">Submit</button>
         </form>
-        
+
       </div>
     </>
   );
