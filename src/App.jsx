@@ -14,6 +14,7 @@ const App = () => {
 
     // note object
     const note = {
+      id: notes.lenght + 1,
       title: title,
       description: description
     }
@@ -28,8 +29,11 @@ const App = () => {
       <Header />
 
       <main>
+        {/* Passed addNote as a props to NoteForm */}
         <NoteForm addNote={addNote} />
-        <NoteCard />
+
+        {/* Passed notes to NoteCard which is an empty array holidng the note. */}
+        <NoteCard notes={notes} />
       </main>
     </>
   );
