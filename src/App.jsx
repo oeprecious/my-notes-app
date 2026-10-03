@@ -15,12 +15,18 @@ const App = () => {
 
     // note object
     const note = {
-      id: notes.lenght + 1,
+      id: Date.now(),
       title: title,
       description: description
     }
     setNotes([...notes, note])
     //"..."This is a spread Operator. Spreads every items into a new array.
+  }
+
+  // Delete note
+  const deleteNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id)
+    setNotes(updatedNotes)
   }
 
   // LocalStorage
@@ -39,7 +45,7 @@ const App = () => {
         <NoteForm addNote={addNote} />
 
         {/* Passed notes to NoteCard which is an empty array holidng the note. */}
-        <NoteCard notes={notes} />
+        <NoteCard notes={notes} deleteNote={deleteNote} />
       </main>
     </>
   );

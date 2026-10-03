@@ -13,3 +13,9 @@
   gap: 1.5rem;
 }
 
+.deleteBtn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
