@@ -32,7 +32,7 @@ const NoteForm = ({addNote}) => {
     <>
       {/* Intro Text */}
         <h2 id="introText">Create your note</h2>
-
+        
       <div className="formContainer">
       
         {/* FORM */}

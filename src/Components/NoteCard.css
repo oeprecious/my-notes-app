@@ -5,17 +5,41 @@
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease
+}
+
+
+
+.noteCard:hover {
+  transform: translateY(-3px);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 .notes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.note p {
+  overflow-wrap: break-word;
 }
 
 .deleteBtn {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+}
+
+.deleteBtn:hover {
+  transform: scale(1.01);
+  transition: transform 0.2s
+}
+
+.deleteBtn:active {
+  transform: scale(0.95)
 }
 
