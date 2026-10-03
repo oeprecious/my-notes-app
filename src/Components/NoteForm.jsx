@@ -52,7 +52,7 @@ const NoteForm = ({addNote}) => {
           <textarea
             name="text"
             id="text"
-            placeholder="Description"
+            placeholder="Note something down"
             value={description}
             onChange={(event) => {
               setDescription(event.target.value);
