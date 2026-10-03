@@ -1,3 +1,5 @@
+ import './NoteCard.css'
+
 const NoteCard = ({notes}) => {
   return (
     <>
@@ -6,8 +8,8 @@ const NoteCard = ({notes}) => {
         <div className="notes">
          
           {notes.map((note) => (
-            <div key={note.id}>
-              <h3>{note.title}</h3>
+            <div className="noteCard" key={note.id}>
+              <h3 id="cardDescription">{note.title}</h3>
               <p>{note.description}</p>
             </div>
           ))}

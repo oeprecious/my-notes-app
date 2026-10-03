@@ -1,0 +1,18 @@
+.noteCard {
+  border: 1px solid #e5e5e5;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 1.5rem;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+#cardDescription {
+  text-align: center;
+}
