@@ -5,33 +5,25 @@ main {
 h2 {
   font-size: 2rem;
 }
- 
-@media only screen and (max-width: 789px) {
 
+@media only screen and (max-width: 789px) {
   form {
     width: 100% !important;
   }
 
-    .notes {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr) !important;
-}
-
-
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media only screen and (max-width: 400px) {
- 
-
   form {
     width: 100% !important;
   }
 
-    .notes {
-   display: grid;
-   grid-template-columns: 1fr !important;
+  .notes {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
 }
-
-}
-
- 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NoteForm.css";
 
-const NoteForm = ({addNote}) => {
+const NoteForm = ({ addNote }) => {
   // Title state
   const [title, setTitle] = useState("");
 
@@ -17,24 +17,24 @@ const NoteForm = ({addNote}) => {
     const titleInput = title.trim()
     const descriptionInput = description.trim()
 
-    if(titleInput === "" || descriptionInput === "") {
+    if (titleInput === "" || descriptionInput === "") {
       setErroMessage("Both fields are required")
       return
     } else {
-    addNote(titleInput, descriptionInput)
-    setErroMessage("")
-    setTitle("")
-    setDescription("")
+      addNote(titleInput, descriptionInput)
+      setErroMessage("")
+      setTitle("")
+      setDescription("")
     }
   };
 
   return (
     <>
       {/* Intro Text */}
-        <h2 id="introText">Create your note</h2>
-        
+      <h2 id="introText">Create your note</h2>
+
       <div className="formContainer">
-      
+
         {/* FORM */}
         <form onSubmit={handleSubmit}>
           <input
@@ -47,7 +47,7 @@ const NoteForm = ({addNote}) => {
               setTitle(event.target.value);
             }}
           />
-          <p style={{marginTop: "5px"}}>{errorMessage}</p>
+          <p style={{ marginTop: "5px" }}>{errorMessage}</p>
 
           <textarea
             name="text"
