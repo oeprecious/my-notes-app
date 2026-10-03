@@ -8,10 +8,24 @@ const NoteForm = ({addNote}) => {
   //   Description state.
   const [description, setDescription] = useState("");
 
+  // Error state
+  const [errorMessage, setErroMessage] = useState("")
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    addNote(title, description)
+    const titleInput = title.trim()
+    const descriptionInput = description.trim()
+
+    if(titleInput === "" || descriptionInput === "") {
+      setErroMessage("Both fields are required")
+      return
+    } else {
+    addNote(titleInput, descriptionInput)
+    setErroMessage("")
+    setTitle("")
+    setDescription("")
+    }
   };
 
   return (
@@ -33,6 +47,7 @@ const NoteForm = ({addNote}) => {
               setTitle(event.target.value);
             }}
           />
+          <p style={{marginTop: "5px"}}>{errorMessage}</p>
 
           <textarea
             name="text"
