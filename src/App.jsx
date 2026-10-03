@@ -7,7 +7,11 @@ import NoteForm from "./Components/NoteForm";
 const App = () => {
 
   // Notes state.
-  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes") || [] ) )
+  const [notes, setNotes] = useState (() => {
+    const savedNotes = localStorage.getItem("notes");
+    return savedNotes ?
+    JSON.parse(savedNotes) : [];
+  })
 
   
   // function that adds addNote
