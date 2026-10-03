@@ -21,9 +21,6 @@ h2 {
 
 @media only screen and (max-width: 400px) {
  
-  * {
-    border: 1px solid red;
-  }
 
   form {
     width: 100% !important;
