@@ -7,6 +7,7 @@
   margin-top: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  position: relative;
 }
 
 .noteCard:hover {
@@ -23,13 +24,15 @@
 }
 
 .note p {
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .deleteBtn {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
   cursor: pointer;
+  width: fit-content !important;
 }
 
 .deleteBtn:hover {
