@@ -12,13 +12,14 @@ html {
 }
 
 body {
-font-family: "Roboto", sans-serif;
-font-size: 1.8rem;
-background-color: white;
- color: var(--text-color)
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  color: var(--text-color);
+  font-size: var(--font-size);
 }
 
 :root {
   --text-color: black;
-  --secondary-text-color: #8E8E93;
+  --secondary-text-color: #8e8e93;
+  --font-size: 1.7rem;
 }

@@ -13,7 +13,7 @@ h2 {
 
   .notes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
   }
 }
 

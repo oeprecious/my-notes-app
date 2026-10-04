@@ -5,12 +5,14 @@ const NoteCard = ({ notes, deleteNote }) => {
   return (
     <>
       <div className="noteContainer">
-        <h2 style={{ marginTop: "6px" }}>Your Notes</h2>
+        <h3 style={{ marginTop: "6px" }}>Your Notes</h3>
+        {notes.length === 0 && "No notes yet. Create your first note!"}
+
         <div className="notes">
 
           {notes.map((note) => (
             <div className="noteCard" key={note.id}>
-              <h3 id="cardDescription">{note.title}</h3>
+              <h4 id="cardDescription">{note.title}</h4>
               <p>{note.description}</p>
 
               <div className="deleteBtn">
