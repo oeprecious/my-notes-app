@@ -9,7 +9,7 @@ const NoteForm = ({ addNote }) => {
   const [description, setDescription] = useState("");
 
   // Error state
-  const [errorMessage, setErroMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,11 +18,11 @@ const NoteForm = ({ addNote }) => {
     const descriptionInput = description.trim()
 
     if (titleInput === "" || descriptionInput === "") {
-      setErroMessage("Both fields are required")
+      setErrorMessage("Both fields are required")
       return
     } else {
       addNote(titleInput, descriptionInput)
-      setErroMessage("")
+      setErrorMessage("")
       setTitle("")
       setDescription("")
     }

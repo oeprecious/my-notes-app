@@ -12,7 +12,7 @@ const NoteCard = ({ notes, deleteNote }) => {
 
           {notes.map((note) => (
             <div className="noteCard" key={note.id}>
-              <h4 id="cardDescription">{note.title}</h4>
+              <h4 className="cardDescription">{note.title}</h4>
               <p>{note.description}</p>
 
               <div className="deleteBtn">

@@ -33,7 +33,7 @@
   right: 5px;
   bottom: 5px;
   cursor: pointer;
-  width: fit-content !important;
+  width: fit-content;
 }
 
 .deleteBtn:hover {
