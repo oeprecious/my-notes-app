@@ -1,5 +1,5 @@
 import './NoteCard.css'
-import { FaTrash } from "react-icons/fa"
+import { FaTrash, FaPen } from "react-icons/fa"
 
 const NoteCard = ({ notes, deleteNote }) => {
   return (
@@ -15,7 +15,8 @@ const NoteCard = ({ notes, deleteNote }) => {
               <h4 className="cardDescription">{note.title}</h4>
               <p>{note.description}</p>
 
-              <div className="deleteBtn">
+              <div className="edit_DeleteBtn">
+                <FaPen/>
                 <FaTrash onClick={() => { deleteNote(note.id) }} />
               </div>
             </div>

@@ -28,19 +28,22 @@
   overflow-wrap: anywhere !important;
 }
 
-.deleteBtn {
+.edit_DeleteBtn {
   position: absolute;
   right: 5px;
   bottom: 5px;
   cursor: pointer;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.deleteBtn:hover {
+.edit_DeleteBtn:hover {
   transform: scale(1.01);
   transition: transform 0.2s;
 }
 
-.deleteBtn:active {
+.edit_DeleteBtn:active {
   transform: scale(0.95);
 }
