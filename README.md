@@ -9,6 +9,7 @@ MyNotes allows you to create, save, and delete notes. Notes are stored in the br
 - Create notes with a title and description
 - Form validation
 - Delete notes
+- Edit notes
 - Save notes using localStorage
 - Responsive design
 - Simple and clean interface
