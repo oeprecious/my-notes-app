@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./NoteForm.css";
 
-const NoteForm = ({addNote, editingNote}) => {
+const NoteForm = ({ addNote, editingNote, updateNote }) => {
 
   // Title state
   const [title, setTitle] = useState("");
@@ -16,6 +16,9 @@ const NoteForm = ({addNote, editingNote}) => {
     if (editingNote) {
       setTitle(editingNote.title)
       setDescription(editingNote.description)
+    } else {
+      setTitle("")
+      setDescription("")
     }
   }, [editingNote])
 
@@ -28,12 +31,14 @@ const NoteForm = ({addNote, editingNote}) => {
     if (titleInput === "" || descriptionInput === "") {
       setErrorMessage("Both fields are required")
       return
+    } else if (editingNote) {
+      updateNote(titleInput, descriptionInput)
     } else {
       addNote(titleInput, descriptionInput)
-      setErrorMessage("")
-      setTitle("")
-      setDescription("")
     }
+    setErrorMessage("")
+    setTitle("")
+    setDescription("")
   };
 
   return (
