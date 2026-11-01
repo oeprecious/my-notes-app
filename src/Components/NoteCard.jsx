@@ -1,7 +1,7 @@
 import './NoteCard.css'
 import { FaTrash, FaPen } from "react-icons/fa"
 
-const NoteCard = ({ notes, deleteNote }) => {
+const NoteCard = ({ notes, deleteNote, editNote }) => {
   return (
     <>
       <div className="noteContainer">
@@ -16,7 +16,7 @@ const NoteCard = ({ notes, deleteNote }) => {
               <p>{note.description}</p>
 
               <div className="edit_DeleteBtn">
-                <FaPen/>
+                <FaPen onClick={() => {editNote(note)}}/>
                 <FaTrash onClick={() => { deleteNote(note.id) }} />
               </div>
             </div>
