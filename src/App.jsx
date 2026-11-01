@@ -13,6 +13,11 @@ const App = () => {
       JSON.parse(savedNotes) : [];
   })
 
+  const [editingNote, setEditingNote] = useState(null)
+
+  const editNote = (note) => {
+    setEditingNote(note)
+  }
 
   // function that adds addNote
   const addNote = (title, description) => {
@@ -46,10 +51,10 @@ const App = () => {
 
       <main>
         {/* Passed addNote as a props to NoteForm */}
-        <NoteForm addNote={addNote} />
+        <NoteForm addNote={addNote} editingNote={editingNote} />
 
         {/* Passed notes to NoteCard which is an empty array holidng the note. */}
-        <NoteCard notes={notes} deleteNote={deleteNote} />
+        <NoteCard notes={notes} deleteNote={deleteNote} editNote={editNote} />
       </main>
     </>
   );

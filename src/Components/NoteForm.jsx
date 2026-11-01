@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NoteForm.css";
 
-const NoteForm = ({ addNote }) => {
+const NoteForm = ({addNote, editingNote}) => {
+
   // Title state
   const [title, setTitle] = useState("");
 
@@ -10,6 +11,13 @@ const NoteForm = ({ addNote }) => {
 
   // Error state
   const [errorMessage, setErrorMessage] = useState("")
+
+  useEffect(() => {
+    if (editingNote) {
+      setTitle(editingNote.title)
+      setDescription(editingNote.description)
+    }
+  }, [editingNote])
 
   const handleSubmit = (event) => {
     event.preventDefault();
