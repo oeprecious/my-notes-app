@@ -71,7 +71,7 @@ const NoteForm = ({ addNote, editingNote, updateNote }) => {
               setDescription(event.target.value);
             }}
           ></textarea>
-          <button id="btn">Submit</button>
+          <button id="btn">{editingNote ? "Update Note" : "Submit"}</button>
         </form>
 
       </div>
