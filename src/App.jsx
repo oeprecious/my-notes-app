@@ -19,6 +19,11 @@ const App = () => {
     setEditingNote(note)
   }
 
+  const updateNote = (title, description) => {
+   setNotes(notes.map(n => n.id === editingNote.id ? {...n, title, description} : n))
+    setEditingNote(null)
+  }
+
   // function that adds addNote
   const addNote = (title, description) => {
 
@@ -51,7 +56,7 @@ const App = () => {
 
       <main>
         {/* Passed addNote as a props to NoteForm */}
-        <NoteForm addNote={addNote} editingNote={editingNote} />
+        <NoteForm addNote={addNote} editingNote={editingNote} updateNote={updateNote} />
 
         {/* Passed notes to NoteCard which is an empty array holidng the note. */}
         <NoteCard notes={notes} deleteNote={deleteNote} editNote={editNote} />

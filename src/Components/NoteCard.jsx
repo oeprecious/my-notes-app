@@ -1,7 +1,7 @@
 import './NoteCard.css'
 import { FaTrash, FaPen } from "react-icons/fa"
 
-const NoteCard = ({ notes, deleteNote, editNote }) => {
+const NoteCard = ({ notes, deleteNote, editNote}) => {
   return (
     <>
       <div className="noteContainer">
