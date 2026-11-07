@@ -26,7 +26,7 @@ MyNotes allows you to create, save, and delete notes. Notes are stored in the br
 
 ### Clone the repository
 
-git clone https://github.com/oeprxc/my-notes-app.git
+git clone https://github.com/oeprecious/my-notes-app.git
 
 ### Install dependencies
 
@@ -53,7 +53,7 @@ While building MyNotes, I practiced:
 
 ## Live Demo
 
-https://oeprxc.github.io/my-notes-app/
+https://oeprecious.github.io/my-notes-app/
 
 ## Author
 
