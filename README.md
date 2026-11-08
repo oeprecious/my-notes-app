@@ -57,4 +57,4 @@ https://oeprecious.github.io/my-notes-app/
 
 ## Author
 
-Built by oeprxc as a React learning project.
+Built by Precious as a React learning project.
