@@ -39,6 +39,8 @@ const App = () => {
 
   // Delete note
   const deleteNote = (id) => {
+    const confirmDelete = window.confirm("Delete this note?")
+    if(!confirmDelete) return
     const updatedNotes = notes.filter((note) => note.id !== id)
     setNotes(updatedNotes)
   }

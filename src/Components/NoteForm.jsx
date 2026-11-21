@@ -60,8 +60,7 @@ const NoteForm = ({ addNote, editingNote, updateNote }) => {
               setTitle(event.target.value);
             }}
           />
-          <p style={{ marginTop: "5px" }}>{errorMessage}</p>
-
+          
           <textarea
             name="text"
             id="text"
@@ -71,6 +70,9 @@ const NoteForm = ({ addNote, editingNote, updateNote }) => {
               setDescription(event.target.value);
             }}
           ></textarea>
+    
+          <p style={{marginTop: "5px", textAlign: "center" }}>{errorMessage}</p> 
+
           <button id="btn">{editingNote ? "Update Note" : "Submit"}</button>
         </form>
 
